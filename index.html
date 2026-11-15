@@ -1,0 +1,1903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex"><!-- remove on switch day 2027-01-19 -->
+<meta name="google-site-verification" content="erP530ELLVugD_rT5MhyaNQYtMNR-qFErgHmSoHEkWg" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electrical Load Calculation Software for Existing Homes | TruePeak</title>
+<meta name="description" content="Prove an existing service has room for a heat pump or EV charger. TruePeak runs NEC 220.87 from smart-meter data, or the standard calc, for an AHJ-ready report.">
+<link rel="canonical" href="https://truepeakapp.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TruePeak">
+<meta property="og:title" content="Electrical Load Calculation Software for Existing Homes | TruePeak">
+<meta property="og:description" content="Prove an existing service has room for a heat pump or EV charger. TruePeak runs the NEC 220.87 measured-demand calculation from utility smart-meter data, or the traditional calculation when there is no data, and prints an AHJ-ready report.">
+<meta property="og:url" content="https://truepeakapp.com/">
+<meta property="og:image" content="https://truepeakapp.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Electrical Load Calculation Software for Existing Homes | TruePeak">
+<meta name="twitter:description" content="Prove an existing service has room for a heat pump or EV charger. TruePeak runs the NEC 220.87 measured-demand calculation from utility smart-meter data, or the traditional calculation when there is no data, and prints an AHJ-ready report.">
+<meta name="twitter:image" content="https://truepeakapp.com/og-image.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://truepeakapp.com/#org",
+      "name": "TruePeak",
+      "legalName": "eTherm Solutions LLC",
+      "url": "https://truepeakapp.com/",
+      "logo": "https://truepeakapp.com/truepeak_logo_lg.png",
+      "email": "info@ethermsolutions.com"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://truepeakapp.com/#site",
+      "url": "https://truepeakapp.com/",
+      "name": "TruePeak",
+      "publisher": {
+        "@id": "https://truepeakapp.com/#org"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "TruePeak",
+      "url": "https://truepeakapp.com/",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "Electrical load calculation software for electricians and heat pump installers. Runs the NEC measured-demand calculation from 12 months of utility interval data, or the traditional existing-dwelling calculation when no data is available, and produces an AHJ-ready report showing whether an existing service has capacity for a heat pump, EV charger or other new load.",
+      "publisher": {
+        "@id": "https://truepeakapp.com/#org"
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Pay Per Project",
+          "price": "30",
+          "priceCurrency": "USD",
+          "description": "Per project. First project free."
+        },
+        {
+          "@type": "Offer",
+          "name": "Unlimited",
+          "price": "59",
+          "priceCurrency": "USD",
+          "description": "Per month, unlimited projects."
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a measured-demand (NEC 220.87) load calculation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is the code's way of sizing the load on an existing service from what the utility meter actually recorded, instead of from nameplate ratings and demand factors. The highest measured peak over the past year is taken at 125 percent, the new load is added, and the total has to fit within the rating of the service."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is that different from a traditional electrical load calculation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A traditional calculation models the home from square footage, appliance nameplates and demand factors. It is a worst-case estimate. Measured demand uses the home's own record. In LBNL research covering 11,940 homes, the measured approach came out roughly 40 percent lower on average."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if the utility doesn't have interval data for the home?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Run the traditional calculation instead. The same TruePeak project runs either method, so a home with no smart-meter history still gets a load calculation and a report, in minutes, with no data request."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a 100-amp panel handle a heat pump or an EV charger?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Often, yes. The average U.S. home peaks at about 40 amps on a 100-amp service. Whether a specific home has room depends on its own measured peak and the equipment being added, which is exactly what a measured-demand calculation documents."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will my inspector accept a measured-demand calculation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is part of the code, not a workaround, and TruePeak's report shows the data source, the peak, the 125 percent factor and the new load so the math can be checked. The Authority Having Jurisdiction always has the final say, so it is worth a conversation with your AHJ before the first submission."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "I'm a homeowner. Can I use TruePeak?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TruePeak is built for the licensed electrician or installer who prepares and signs the calculation. If you have been told you need a panel upgrade, send your contractor our homeowner guide and ask them to check your measured demand first."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="icon" type="image/png" href="favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --blue: #2E5E99;
+  --blue-dark: #234A78;
+  --blue-light: #dbeafe;
+  --yellow: #E8A638;
+  --green: #16a34a;
+  --green-light: #dcfce7;
+  --slate-900: #0f172a;
+  --slate-800: #1e293b;
+  --slate-600: #475569;
+  --slate-400: #94a3b8;
+  --slate-200: #e2e8f0;
+  --slate-100: #f1f5f9;
+  --slate-50: #f8fafc;
+  --white: #ffffff;
+  --font: 'DM Sans', sans-serif;
+  --mono: 'DM Mono', monospace;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font);
+  background: var(--white);
+  color: var(--slate-900);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 48px;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.nav-logo img { height: 72px; display: block; }
+.nav-right { display: flex; align-items: center; gap: 24px; }
+.nav-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--slate-600);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.15s;
+}
+.nav-link:hover { color: var(--slate-900); }
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--yellow);
+  color: var(--blue-dark);
+  font-weight: 700;
+  font-size: 14px;
+  padding: 10px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+  letter-spacing: 0.01em;
+}
+.nav-cta:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(232,166,56,0.35); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 24px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(46,94,153,0.07) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 80% 80%, rgba(232,166,56,0.05) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 0%, black, transparent);
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(46,94,153,0.08);
+  border: 1px solid rgba(46,94,153,0.25);
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 100px;
+  margin-bottom: 28px;
+}
+.hero-eyebrow-dot {
+  width: 6px; height: 6px;
+  background: var(--blue);
+  border-radius: 50%;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.7); }
+}
+
+.hero h1 {
+  font-size: clamp(38px, 6vw, 72px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  max-width: 820px;
+  margin-bottom: 20px;
+}
+.hero h1 em {
+  font-style: normal;
+  color: var(--yellow);
+}
+
+.hero-sub {
+  font-size: clamp(16px, 2vw, 20px);
+  color: var(--slate-600);
+  max-width: 620px;
+  margin: 0 auto 36px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--yellow);
+  color: var(--blue-dark);
+  font-weight: 700;
+  font-size: 15px;
+  padding: 14px 28px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(232,166,56,0.4); }
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.15);
+  color: var(--slate-800);
+  font-weight: 500;
+  font-size: 15px;
+  padding: 14px 28px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s;
+}
+.btn-secondary:hover { background: rgba(0,0,0,0.09); border-color: rgba(0,0,0,0.25); }
+
+/* ── HERO PATH STRIP ── */
+.hero-paths {
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+  position: relative;
+}
+.hero-paths-q {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--slate-600);
+  margin-bottom: 14px;
+}
+.hero-paths-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.hero-path {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 8px;
+  background: rgba(255,255,255,0.85);
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 14px;
+  padding: 20px 22px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+}
+.hero-path:hover {
+  border-color: rgba(46,94,153,0.4);
+  box-shadow: 0 10px 30px rgba(15,23,42,0.08);
+  transform: translateY(-2px);
+}
+.hero-path-answer {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+.hero-path-answer.yes {
+  background: rgba(22,163,74,0.12);
+  border: 1px solid rgba(22,163,74,0.3);
+  color: var(--green);
+}
+.hero-path-answer.not-yet {
+  background: rgba(232,166,56,0.16);
+  border: 1px solid rgba(232,166,56,0.45);
+  color: #a16207;
+}
+.hero-path-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--slate-900);
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+  line-height: 1.3;
+}
+.hero-path-desc {
+  font-size: 14px;
+  color: var(--slate-600);
+  line-height: 1.55;
+}
+.hero-paths-foot {
+  margin-top: 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--slate-800);
+}
+@media (max-width: 768px) {
+  .hero-paths-grid { grid-template-columns: 1fr; }
+}
+
+/* ── DEMO WRAPPER ── */
+.demo-wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.08),
+    0 40px 80px rgba(0,0,0,0.6),
+    0 0 80px rgba(46,94,153,0.2);
+  position: relative;
+}
+.demo-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 17px;
+  background: linear-gradient(135deg, rgba(46,94,153,0.6), rgba(232,166,56,0.2), transparent 60%);
+  z-index: -1;
+}
+
+/* Embed the demo iframe-style */
+.demo-inner {
+  background: #f9fafb;
+  width: 100%;
+  aspect-ratio: 900 / 640;
+}
+
+/* ── SECTION COMMON ── */
+section {
+  padding: 100px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 14px;
+}
+
+/* ── PROBLEM SECTION ── */
+.problem-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 100px 24px;
+}
+.problem-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2px;
+  background: rgba(0,0,0,0.06);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+.problem-card {
+  background: var(--slate-50);
+  padding: 40px 36px;
+  position: relative;
+}
+.problem-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--blue), transparent);
+}
+.problem-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--slate-600);
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+}
+.problem-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+.problem-card p {
+  font-size: 15px;
+  color: var(--slate-600);
+  line-height: 1.65;
+}
+
+/* ── TWO METHODS ── */
+.methods-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 100px 24px;
+}
+.methods-header {
+  max-width: 640px;
+  margin-bottom: 48px;
+}
+.methods-header h2 {
+  font-size: clamp(34px, 4.5vw, 52px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+.methods-header p {
+  font-size: 17px;
+  color: var(--slate-600);
+  line-height: 1.65;
+}
+.methods-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+.method-card {
+  background: var(--slate-50);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 16px;
+  padding: 36px;
+  position: relative;
+  overflow: hidden;
+}
+.method-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+}
+.method-card-measured::before { background: linear-gradient(90deg, var(--blue), rgba(46,94,153,0.15)); }
+.method-card-traditional::before { background: linear-gradient(90deg, var(--yellow), rgba(232,166,56,0.15)); }
+.method-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+.method-tag {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--slate-600);
+}
+.method-code {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--blue);
+  background: rgba(46,94,153,0.08);
+  border: 1px solid rgba(46,94,153,0.2);
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+.method-card h3 {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  margin-bottom: 18px;
+}
+.method-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.method-list li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 15px;
+  color: var(--slate-600);
+  line-height: 1.6;
+}
+.method-list li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 10px;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+.method-card-traditional .method-list li::before { background: var(--yellow); }
+.methods-bridge {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3px;
+  background: rgba(0,0,0,0.06);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+.bridge-item {
+  background: var(--white);
+  padding: 28px 30px;
+}
+.bridge-item h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+.bridge-item p {
+  font-size: 14px;
+  color: var(--slate-600);
+  line-height: 1.6;
+}
+.methods-more {
+  margin-top: 28px;
+  font-size: 15px;
+}
+.methods-more a {
+  color: var(--blue);
+  font-weight: 600;
+  text-decoration: none;
+}
+.methods-more a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.demo-caption {
+  margin: 48px 0 16px;
+  font-size: 14px;
+  color: var(--slate-600);
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .methods-grid { grid-template-columns: 1fr; }
+  .methods-bridge { grid-template-columns: 1fr; }
+  .method-card { padding: 28px 24px; }
+}
+
+/* ── HOW IT WORKS ── */
+.how-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 100px 24px;
+}
+.how-header {
+  max-width: 560px;
+  margin-bottom: 64px;
+}
+.how-header h2 {
+  font-size: clamp(34px, 4.5vw, 52px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+.how-header p {
+  font-size: 17px;
+  color: var(--slate-600);
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+  background: rgba(0,0,0,0.06);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+.step {
+  background: var(--slate-50);
+  padding: 36px 40px;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  transition: background 0.2s;
+}
+.step:hover { background: var(--slate-100); }
+.step-num {
+  flex-shrink: 0;
+  width: 40px; height: 40px;
+  background: rgba(46,94,153,0.08);
+  border: 1px solid rgba(46,94,153,0.25);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--blue);
+}
+.step-content h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+.step-content p {
+  font-size: 14px;
+  color: var(--slate-600);
+  line-height: 1.6;
+}
+
+/* ── WHO IT'S FOR ── */
+.who-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 100px 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.who-text h2 {
+  font-size: clamp(34px, 4.5vw, 52px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+.who-text p {
+  font-size: 17px;
+  color: var(--slate-600);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+.who-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 28px;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(46,94,153,0.07);
+  border: 1px solid rgba(46,94,153,0.2);
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 100px;
+}
+.chip-dot { width: 5px; height: 5px; background: var(--blue); border-radius: 50%; }
+
+.who-stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+  background: rgba(0,0,0,0.06);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+.who-stat {
+  background: var(--slate-50);
+  padding: 32px 28px;
+}
+.who-stat-val {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--blue);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.who-stat-label {
+  font-size: 13px;
+  color: var(--slate-600);
+  line-height: 1.5;
+}
+
+/* ── CUSTOMER QUOTE ── */
+.quote-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+.quote-card {
+  margin: 0;
+  background: var(--slate-50);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-left: 4px solid var(--blue);
+  border-radius: 16px;
+  padding: 40px 44px;
+}
+.quote-card blockquote {
+  margin: 0;
+  font-size: clamp(20px, 2.4vw, 26px);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: var(--slate-900);
+}
+.quote-card figcaption {
+  margin-top: 20px;
+  font-size: 15px;
+  color: var(--slate-600);
+}
+.quote-card figcaption strong {
+  color: var(--slate-900);
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .quote-section { padding: 64px 16px; }
+  .quote-card { padding: 28px 22px; }
+}
+
+/* ── AS HEARD ON (podcast) ── */
+.podcast-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+.podcast-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: center;
+  background: var(--slate-50);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 16px;
+  padding: 28px;
+}
+.podcast-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--slate-900);
+}
+.podcast-video img,
+.podcast-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+.podcast-video img { object-fit: cover; }
+.podcast-play {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.podcast-play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 68px;
+  height: 48px;
+  transform: translate(-50%, -50%);
+  background: rgba(15,23,42,0.82);
+  border-radius: 12px;
+  transition: background 0.2s;
+}
+.podcast-play-icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-width: 10px 0 10px 17px;
+  border-color: transparent transparent transparent var(--white);
+}
+.podcast-play:hover .podcast-play-icon,
+.podcast-play:focus-visible .podcast-play-icon { background: var(--blue); }
+.podcast-play:focus-visible { outline: 3px solid var(--yellow); outline-offset: -3px; }
+.podcast-text h2 {
+  font-size: clamp(26px, 3vw, 34px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+.podcast-sub {
+  font-style: italic;
+  font-size: 17px;
+  color: var(--slate-800);
+  margin-bottom: 14px;
+}
+.podcast-text p.podcast-body {
+  font-size: 16px;
+  color: var(--slate-600);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.podcast-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  align-items: center;
+}
+.podcast-links a {
+  color: var(--blue);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+.podcast-links a:hover { text-decoration: underline; }
+.podcast-links a.podcast-watch {
+  background: var(--blue);
+  color: var(--white);
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.podcast-links a.podcast-watch:hover { background: var(--blue-dark); text-decoration: none; }
+@media (max-width: 768px) {
+  .podcast-section { padding: 64px 16px; }
+  .podcast-card { grid-template-columns: 1fr; gap: 24px; padding: 16px; }
+}
+
+/* ── PRICING ── */
+.pricing-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 100px 24px;
+  text-align: center;
+}
+.pricing-header {
+  margin-bottom: 56px;
+}
+.pricing-header h2 {
+  font-size: clamp(34px, 4.5vw, 52px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+.pricing-header p {
+  font-size: 17px;
+  color: var(--slate-600);
+}
+.pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+  margin-bottom: 40px;
+}
+.plan-card {
+  background: var(--white);
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 16px;
+  padding: 36px 32px;
+  text-align: left;
+  position: relative;
+  transition: box-shadow 0.2s;
+}
+.plan-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+}
+.plan-card-featured {
+  border: 1.5px solid rgba(46,94,153,0.3);
+  box-shadow: 0 8px 40px rgba(46,94,153,0.12);
+  transform: scale(1.03);
+}
+.plan-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(22,163,74,0.15);
+  border: 1px solid rgba(22,163,74,0.35);
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+}
+.plan-name {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--slate-600);
+  margin-bottom: 12px;
+}
+.plan-price {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+.plan-price-amount {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--slate-900);
+  line-height: 1;
+}
+.plan-price-period {
+  font-size: 15px;
+  color: var(--slate-400);
+  font-weight: 400;
+}
+.plan-subline {
+  font-size: 14px;
+  color: var(--slate-600);
+  line-height: 1.5;
+  margin-bottom: 28px;
+  min-height: 40px;
+}
+.plan-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+.plan-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--slate-800);
+  line-height: 1.4;
+}
+.plan-check {
+  color: var(--green);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.btn-enterprise {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--blue);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 14px;
+  padding: 14px 28px;
+  border-radius: 10px;
+  text-decoration: none;
+  width: 100%;
+  justify-content: center;
+  white-space: nowrap;
+  min-height: 52px;
+  transition: background 0.15s, transform 0.15s;
+}
+.btn-enterprise:hover {
+  background: var(--blue-dark);
+  transform: translateY(-1px);
+}
+.btn-primary-full {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--yellow);
+  color: var(--blue-dark);
+  font-weight: 700;
+  font-size: 15px;
+  padding: 14px 28px;
+  border-radius: 10px;
+  text-decoration: none;
+  width: 100%;
+  justify-content: center;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.btn-primary-full:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(232,166,56,0.4);
+}
+.pricing-secondary {
+  font-size: 15px;
+  color: var(--slate-600);
+  margin-top: 8px;
+}
+.pricing-secondary a {
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+@media (max-width: 900px) {
+  .pricing-grid { grid-template-columns: 1fr; }
+  .plan-card-featured { transform: none; }
+}
+
+/* ── FOOTER ── */
+footer {
+  border-top: 1px solid rgba(0,0,0,0.08);
+  padding: 40px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.footer-logo img { height: 72px; display: block; }
+.footer-disclaimer {
+  font-size: 12px;
+  color: var(--slate-600);
+  max-width: 560px;
+  line-height: 1.6;
+}
+.footer-link {
+  font-size: 13px;
+  color: var(--slate-600);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s;
+}
+.footer-link:hover { color: var(--slate-900); }
+
+/* ── DIVIDER ── */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0,0,0,0.1), transparent);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  nav { padding: 14px 20px; }
+  .problem-grid { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; }
+  .who-section { grid-template-columns: 1fr; gap: 48px; }
+  .access-card { padding: 40px 24px; }
+  footer { flex-direction: column; align-items: flex-start; padding: 32px 20px; }
+  .hero-actions { flex-direction: column; align-items: center; }
+}
+
+/* ── HOOK SECTION ── */
+.hook-section {
+  background: #ffffff;
+  color: var(--slate-900);
+  padding: 100px 24px 100px;
+  position: relative;
+  overflow: hidden;
+}
+.hook-section::before {
+  display: none;
+}
+.hook-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.hook-text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.hook-kicker {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 20px;
+}
+.hook-headline {
+  font-size: clamp(32px, 4.5vw, 56px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 28px;
+  color: var(--slate-900);
+}
+.hook-headline em {
+  font-style: normal;
+  color: var(--blue);
+}
+.hook-body {
+  font-size: 17px;
+  color: rgba(15,23,42,0.65);
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+.hook-savings {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(232,166,56,0.12);
+  border: 1px solid rgba(232,166,56,0.35);
+  border-radius: 14px;
+  padding: 20px 28px;
+}
+.hook-savings-amount {
+  font-size: 44px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--yellow);
+  line-height: 1;
+}
+.hook-savings-label {
+  font-size: 14px;
+  color: rgba(15,23,42,0.6);
+  line-height: 1.4;
+}
+
+/* Capacity Bar Chart */
+.capacity-chart {
+  background: #f8fafc;
+  border: 1px solid rgba(15,23,42,0.1);
+  border-radius: 20px;
+  padding: 36px;
+}
+.chart-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(15,23,42,0.45);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+.chart-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.chart-bar-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.chart-bar-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.chart-bar-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(15,23,42,0.75);
+}
+.chart-bar-value {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(15,23,42,0.45);
+}
+.chart-bar-track {
+  height: 36px;
+  background: rgba(15,23,42,0.07);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+.chart-bar-fill {
+  height: 100%;
+  border-radius: 8px;
+  width: 0;
+  transition: width 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  position: relative;
+}
+.chart-bar-fill.bar-available {
+  background: linear-gradient(90deg, rgba(46,94,153,0.6), rgba(46,94,153,0.9));
+}
+.chart-bar-fill.bar-peak {
+  background: linear-gradient(90deg, var(--yellow), #f0a500);
+}
+.chart-bar-fill-pct {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
+  white-space: nowrap;
+}
+.chart-gap-callout {
+  margin-top: 28px;
+  background: rgba(22,163,74,0.12);
+  border: 1px solid rgba(22,163,74,0.3);
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.callout-icon {
+  width: 36px; height: 36px;
+  background: rgba(22,163,74,0.2);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  font-size: 18px;
+}
+.callout-text {
+  font-size: 13px;
+  color: rgba(15,23,42,0.7);
+  line-height: 1.5;
+}
+.callout-text strong {
+  color: #4ade80;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .hook-inner { grid-template-columns: 1fr; gap: 48px; }
+}
+
+/* ── MOBILE NAV: the full logo is 252px wide, so on phones the links drop beneath it ── */
+@media (max-width: 640px) {
+  nav { flex-wrap: wrap; row-gap: 6px; padding: 10px 16px; }
+  .nav-logo img { height: 48px; }
+  .nav-right { width: 100%; justify-content: flex-end; gap: 14px; }
+  .nav-cta { padding: 8px 16px; }
+  .hero { padding-top: 132px; }
+}
+/* Small phones (≤360px): the hero pill wraps to two lines otherwise. */
+@media (max-width: 360px) {
+  .hero-eyebrow { font-size: 10.5px; letter-spacing: 0.06em; padding: 6px 12px; }
+}
+
+/* ── FADE IN ON SCROLL ── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── HOMEOWNERS ── */
+.homeowner-section { max-width: 1100px; margin: 0 auto; padding: 100px 24px; }
+.homeowner-card {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 48px;
+  align-items: center;
+  background: var(--slate-50);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 20px;
+  padding: 48px;
+}
+.homeowner-card h2 { font-size: clamp(28px, 3.5vw, 40px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 16px; }
+.homeowner-card p { font-size: 17px; color: var(--slate-600); line-height: 1.7; }
+.homeowner-actions { display: flex; flex-direction: column; gap: 12px; align-items: stretch; text-align: center; }
+.homeowner-actions a { justify-content: center; }
+
+/* ── FAQ ── */
+.faq-section { max-width: 820px; margin: 0 auto; padding: 100px 24px; }
+.faq-section .pricing-header { text-align: center; }
+.faq-item { border-bottom: 1px solid rgba(0,0,0,0.1); }
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 22px 32px 22px 0;
+  position: relative;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: '+'; position: absolute; right: 4px; top: 18px; font-size: 24px; font-weight: 400; color: var(--blue); }
+.faq-item[open] summary::after { content: '\2212'; }
+.faq-item p { font-size: 16px; color: var(--slate-600); line-height: 1.7; padding: 0 32px 24px 0; }
+.faq-item p a { color: var(--blue); }
+@media (max-width: 768px) {
+  .homeowner-card { grid-template-columns: 1fr; padding: 32px 24px; gap: 28px; }
+}
+
+/* ── DEMO INLINE STYLES (scoped) ── */
+.demo-inner * { box-sizing: border-box; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <img src="truepeak_logo.svg" alt="TruePeak">
+  </div>
+  <div class="nav-right">
+    <a href="/methods/" class="nav-link">Two Methods</a>
+    <a href="/resources/" class="nav-link">Resources</a>
+    <a href="#pricing" class="nav-cta">See Pricing</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+
+  <div class="hero-eyebrow">
+    <span class="hero-eyebrow-dot"></span>
+    One Tool · Every Existing Home
+  </div>
+
+  <h1>Service adequacy,<br>backed by <em>real data.</em></h1>
+
+  <p class="hero-sub">TruePeak gives electricians and heat pump installers a fast, defensible way to calculate existing service capacity: from the home's own utility data when it's available, and from the traditional NEC calculation when it isn't. One project, one AHJ-ready report, anywhere in the US.</p>
+
+  <div class="hero-actions">
+    <a href="https://app.trueloadapp.com?plan=trial" class="btn-primary">Get Started Free →</a>
+    <a href="#how-it-works" class="btn-secondary">See How It Works</a>
+  </div>
+
+  <div class="hero-paths">
+    <div class="hero-paths-q">Does the utility have interval data for this home?</div>
+    <div class="hero-paths-grid">
+      <a href="#methods" class="hero-path">
+        <span class="hero-path-answer yes">Yes</span>
+        <span class="hero-path-name">Measured demand</span>
+        <span class="hero-path-desc">The home's real peak, straight from the meter. Usually the lowest defensible number, on average about 40% lower than a traditional calc.</span>
+      </a>
+      <a href="#methods" class="hero-path">
+        <span class="hero-path-answer not-yet">Not yet</span>
+        <span class="hero-path-name">Traditional calculation</span>
+        <span class="hero-path-desc">Floor area and the appliance inventory, with the code's own demand factors applied. No utility data, no waiting.</span>
+      </a>
+    </div>
+    <div class="hero-paths-foot">No second tool. No new workflow. Same trusted report either way.</div>
+  </div>
+
+</section>
+
+<!-- HOOK -->
+<div class="hook-section" id="hook">
+  <div class="hook-inner">
+    <div class="hook-text-block fade-up">
+      <h2 class="hook-headline">Electric panels have<br>more capacity than<br>you <em>think they do.</em></h2>
+      <p class="hook-body">The average U.S. home peaks at just 40 amps on a standard 100-amp service. That's a 60-amp gap — sitting there unused. Before you recommend a service upgrade, check the data.</p>
+      <div class="hook-savings">
+        <div class="hook-savings-amount">$5,000+</div>
+        <div class="hook-savings-label">saved for your customer<br>on avoided upgrades</div>
+      </div>
+    </div>
+    <div class="capacity-chart fade-up" id="capacity-chart">
+      <div class="chart-title">Example U.S. Home — 100A Service Capacity</div>
+      <div class="chart-bars">
+        <div class="chart-bar-row">
+          <div class="chart-bar-meta">
+            <span class="chart-bar-label">Available Service Capacity</span>
+          </div>
+          <div class="chart-bar-track">
+            <div class="chart-bar-fill bar-available" data-width="100">
+              <span class="chart-bar-fill-pct">100A</span>
+            </div>
+          </div>
+        </div>
+        <div class="chart-bar-row">
+          <div class="chart-bar-meta">
+            <span class="chart-bar-label">Average Home Peak Demand</span>
+          </div>
+          <div class="chart-bar-track">
+            <div class="chart-bar-fill bar-peak" data-width="40">
+              <span class="chart-bar-fill-pct">40A</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="chart-gap-callout">
+        <div class="callout-icon">✓</div>
+        <div class="callout-text"><strong>60A of headroom remains.</strong> Don't lose a job over a service upgrade that doesn't need to happen. Prove it with TruePeak.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- PROBLEM -->
+<div class="problem-section fade-up">
+  <div class="section-label">The Problem</div>
+  <div style="max-width:560px; margin-bottom:48px;">
+    <h2 style="font-size:clamp(34px,4.5vw,52px);font-weight:700;letter-spacing:-0.02em;line-height:1.15;margin-bottom:16px;">
+      Panel and service upgrades slow jobs down and cost customers money
+    </h2>
+    <p style="font-size:17px;color:var(--slate-600);line-height:1.65;">
+      TruePeak uses the home's actual measured demand to prove the existing service is adequate. Where that data isn't available yet, the same project runs the traditional NEC calculation instead. Data access and documentation have been the problem - until now.
+    </p>
+  </div>
+  <div class="problem-grid">
+    <div class="problem-card">
+      <div class="problem-num">01</div>
+      <h3>Inspectors want documentation</h3>
+      <p>Authorities Having Jurisdiction (AHJs) increasingly require a formal calculation before approving heat pump or EV charger installations on existing services. A verbal assurance isn't enough.</p>
+    </div>
+    <div class="problem-card">
+      <div class="problem-num">02</div>
+      <h3>Service upgrades stall projects</h3>
+      <p>Recommending a service upgrade when one isn't needed adds thousands in cost and weeks of delay — and can kill a sale before it starts.</p>
+    </div>
+    <div class="problem-card">
+      <div class="problem-num">03</div>
+      <h3>Measured demand is underused</h3>
+      <p>The code has allowed it for years, but access to data and clarity around how measured demand can be used have kept the method overlooked. TruePeak closes that gap.</p>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- TWO METHODS -->
+<div class="methods-section fade-up" id="methods">
+  <div class="methods-header">
+    <div class="section-label">Two Methods, One Tool</div>
+    <h2>Measured when you can.<br>Traditional when you can't.</h2>
+    <p>Smart-meter data is spreading, but it's uneven: one job has a year of interval history, the next has none. TruePeak handles both from the same project, so it works anywhere in the US and you don't need a second tool for the homes without data.</p>
+  </div>
+  <div class="methods-grid">
+    <div class="method-card method-card-measured">
+      <div class="method-card-top">
+        <span class="method-tag">Measured demand</span>
+        <span class="method-code">Any existing service</span>
+      </div>
+      <h3>The home's actual peak, from utility interval data</h3>
+      <ul class="method-list">
+        <li>Takes the highest demand the home actually reached, at 125%, plus the proposed new load.</li>
+        <li>Replaces the code's estimate with the home's own record. On average about 40% lower than the traditional method, which is what keeps a 100 A service off the upgrade list.</li>
+        <li>Built-in data request: your customer authorizes the release, the utility sends the file, you drop it in.</li>
+        <li>Applies to any existing service, single or three phase, home or not.</li>
+      </ul>
+    </div>
+    <div class="method-card method-card-traditional">
+      <div class="method-card-top">
+        <span class="method-tag">Traditional calculation</span>
+        <span class="method-code">Existing homes</span>
+      </div>
+      <h3>The code's own method for existing homes, no utility data needed</h3>
+      <ul class="method-list">
+        <li>Builds the existing load from floor area, circuit counts and the appliance inventory, with the section's demand factors applied.</li>
+        <li>No data request and no waiting. Enter the home and get the number in minutes.</li>
+        <li>The full worksheet prints on the report, line by line, with its citations and any election you made.</li>
+        <li>Runs under the 2020, 2023 or 2026 edition of the NEC, whichever your jurisdiction enforces.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="methods-bridge">
+    <div class="bridge-item">
+      <h4>Start every job the same way</h4>
+      <p>TruePeak suggests a path from the utility you select, and both stay one click apart. If the data exists, request it. If it doesn't, run the traditional calc today.</p>
+    </div>
+    <div class="bridge-item">
+      <h4>A FAIL is not a dead end</h4>
+      <p>If the traditional calc comes up short, request the customer's data and run measured demand in the same project. When both have run, you pick which one the report is based on.</p>
+    </div>
+    <div class="bridge-item">
+      <h4>One report for the inspector</h4>
+      <p>The report carries the method you chose, with its full worksheet and citations. Add the side-by-side methods comparison only when the method choice itself is being questioned.</p>
+    </div>
+  </div>
+  <p class="methods-more"><a href="/methods/">Which method, when? Compare the two in depth →</a></p>
+</div>
+
+<div class="divider"></div>
+
+<!-- HOW IT WORKS -->
+<div class="how-section fade-up" id="how-it-works">
+  <div class="how-header">
+    <div class="section-label">How It Works</div>
+    <h2>Six steps to a documented load calculation</h2>
+    <p>TruePeak walks you through the whole process on either path, from establishing the existing load to printing a report ready for the AHJ.</p>
+  </div>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">01</div>
+      <div class="step-content">
+        <h3>Create a new project</h3>
+        <p>One project per job site. Enter the customer information and your details.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <div class="step-content">
+        <h3>Enter the existing service</h3>
+        <p>Enter service information such as the main breaker size and service voltage plus utility account information.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <div class="step-content">
+        <h3>Choose the existing-load path</h3>
+        <p>Measured demand if the utility has interval data, traditional calculation if it doesn't. TruePeak suggests one from the utility you selected, and both stay available.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <div class="step-content">
+        <h3>Establish the existing load</h3>
+        <p>Measured: one-click data request, your customer authorizes it, and you drag in the file (CSV, Excel or XML). Traditional: floor area, circuits and the appliance inventory.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">05</div>
+      <div class="step-content">
+        <h3>Add proposed equipment</h3>
+        <p>List each piece of new equipment — heat pump, EV charger, water heater — and provide nameplate equipment demand.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">06</div>
+      <div class="step-content">
+        <h3>Review results and print the report</h3>
+        <p>PASS or FAIL is displayed immediately. Print a formatted report on the method you chose, ready for permit submission or for your records.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="demo-caption">Below: the measured-demand path, start to finish.</p>
+
+  <!-- ANIMATED DEMO EMBEDDED INLINE -->
+  <div class="demo-wrapper fade-up">
+    <div class="demo-inner">
+      <iframe src="/public/demo.html" scrolling="no" style="width:100%;height:100%;border:none;display:block;" title="TruePeak Animated Demo"></iframe>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- WHO IT'S FOR -->
+<div class="who-section fade-up">
+  <div class="who-text">
+    <div class="section-label">Who It's For</div>
+    <h2>Built for professional electricians and heat pump installers</h2>
+    <p>TruePeak is designed for licensed electricians and heat pump installers who need an existing-service load calculation they can hand to an inspector, quickly and reliably. It works with or without utility interval data, anywhere in the US, so one tool covers your existing-home jobs.</p>
+    <p>If you're adding a heat pump, EV charger, or other major load to an existing residential service and want to avoid an unnecessary panel or service upgrade, this is the tool. New to measured demand? Start with <a href="/resources/guides/nec-220-87/" style="color:var(--blue);">our plain-language guide</a>.</p>
+    <div class="who-chips">
+      <span class="chip"><span class="chip-dot"></span>Licensed Electricians</span>
+      <span class="chip"><span class="chip-dot"></span>Heat Pump Installers</span>
+      <span class="chip"><span class="chip-dot"></span>EV Charger Installers</span>
+      <span class="chip"><span class="chip-dot"></span>Plumbing/Heating Contractors</span>
+    </div>
+  </div>
+  <div class="who-stat-grid">
+    <div class="who-stat">
+      <div class="who-stat-val">More Installations</div>
+      <div class="who-stat-label">Don't lose jobs to unnecessary service upgrades</div>
+    </div>
+    <div class="who-stat">
+      <div class="who-stat-val">Save Time</div>
+      <div class="who-stat-label">Spend your time on billable jobs, not load calculations</div>
+    </div>
+    <div class="who-stat">
+      <div class="who-stat-val">Document Capacity</div>
+      <div class="who-stat-label">Clear calculations and reports in minutes</div>
+    </div>
+    <div class="who-stat">
+      <div class="who-stat-val">10 Min</div>
+      <div class="who-stat-label">Or less from project creation to final report</div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- CUSTOMER QUOTE (posted with the customer's permission) -->
+<div class="quote-section fade-up" id="customer-quote">
+  <figure class="quote-card">
+    <blockquote>
+      <p>[TruePeak] has allowed me to confidently say to clients &ldquo;you don&rsquo;t need an electrical service upgrade&rdquo; which made the job close faster and at less cost. I am generally allergic to business software but your program is a great tool.</p>
+    </blockquote>
+    <figcaption><strong>Colin Doolittle</strong>, On The Dot HVAC</figcaption>
+  </figure>
+</div>
+
+<div class="divider"></div>
+
+<!-- AS HEARD ON -->
+<div class="podcast-section fade-up" id="podcast">
+  <div class="podcast-card">
+    <div class="podcast-video" id="podcast-video">
+      <img src="https://i.ytimg.com/vi/OVZiqvVBo88/hqdefault.jpg" loading="lazy" width="480" height="360" alt="Video thumbnail for The Heat Pump Podcast episode 71, Stop Losing Heat Pump Jobs to Panel Upgrades, with Jake Marin of TrueLoad">
+      <button type="button" class="podcast-play" id="podcast-play" aria-label="Play The Heat Pump Podcast episode 71 video">
+        <span class="podcast-play-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="podcast-text">
+      <div class="section-label">As heard on</div>
+      <h2>The Heat Pump Podcast</h2>
+      <p class="podcast-sub">Stop Losing Heat Pump Jobs to Panel Upgrades</p>
+      <p class="podcast-body">Jake Marin joins Amply's Ed Smith and Eric Fitz to talk about why so many service upgrades never needed to happen, and how a year of smart-meter data can prove it.</p>
+      <div class="podcast-links">
+        <a href="https://www.youtube.com/watch?v=OVZiqvVBo88" class="podcast-watch" id="podcast-watch" target="_blank" rel="noopener">Watch the episode</a>
+        <a href="https://podcasts.apple.com/us/podcast/the-heat-pump-podcast/id1747806243" target="_blank" rel="noopener">Apple Podcasts</a>
+        <a href="https://open.spotify.com/show/3pJxxoC8fS0HZEf22FQwDX" target="_blank" rel="noopener">Spotify</a>
+        <a href="https://info.amply.energy/blog/ep.-71-stop-losing-heat-pump-jobs-to-panel-upgrades-with-jake-marin-of-trueload" target="_blank" rel="noopener">Show notes</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- PRICING -->
+<div class="pricing-section fade-up" id="pricing">
+  <div class="pricing-header">
+    <div class="section-label">Pricing</div>
+    <h2>Simple, transparent pricing</h2>
+    <p>Start free — your first project is on us. Scale as you grow.</p>
+  </div>
+
+  <div class="pricing-grid">
+
+    <!-- Pay Per Project -->
+    <div class="plan-card">
+      <div class="plan-name">Pay Per Project</div>
+      <div class="plan-price">
+        <span class="plan-price-amount">$30</span>
+        <span class="plan-price-period">/project</span>
+      </div>
+      <p class="plan-subline">No subscription. Pay only when you need it.</p>
+      <ul class="plan-features">
+        <li><span class="plan-check">✓</span> First project free</li>
+        <li><span class="plan-check">✓</span> Both methods: measured demand and traditional</li>
+        <li><span class="plan-check">✓</span> AHJ-ready PDF report</li>
+        <li><span class="plan-check">✓</span> Utility AMI data integration</li>
+        <li><span class="plan-check">✓</span> No monthly commitment</li>
+      </ul>
+      <a href="https://app.trueloadapp.com?plan=trial" class="btn-primary-full">Start Free Trial →</a>
+    </div>
+
+    <!-- Unlimited -->
+    <div class="plan-card plan-card-featured">
+      <div class="plan-badge">Most Popular</div>
+      <div class="plan-name">Unlimited</div>
+      <div class="plan-price">
+        <span class="plan-price-amount">$59</span>
+        <span class="plan-price-period">/month</span>
+      </div>
+      <p class="plan-subline">Unlimited projects, one flat rate. Break even at 2 projects/month.</p>
+      <ul class="plan-features">
+        <li><span class="plan-check">✓</span> Everything in Pay Per Project</li>
+        <li><span class="plan-check">✓</span> Unlimited projects</li>
+        <li><span class="plan-check">✓</span> Cancel anytime</li>
+        <li><span class="plan-check">✓</span> Priority support</li>
+      </ul>
+      <a href="https://app.trueloadapp.com?plan=unlimited" class="btn-primary-full">Get Started →</a>
+    </div>
+
+    <!-- Enterprise -->
+    <div class="plan-card">
+      <div class="plan-name">Enterprise</div>
+      <div class="plan-price">
+        <span class="plan-price-amount">Custom</span>
+      </div>
+      <p class="plan-subline">For firms with multiple users.</p>
+      <ul class="plan-features">
+        <li><span class="plan-check">✓</span> Everything in Unlimited</li>
+        <li><span class="plan-check">✓</span> Multi-user firm account</li>
+        <li><span class="plan-check">✓</span> Centralized billing</li>
+        <li><span class="plan-check">✓</span> Firm-level project management</li>
+        <li><span class="plan-check">✓</span> Volume pricing</li>
+      </ul>
+      <a href="https://app.trueloadapp.com?plan=enterprise" class="btn-enterprise">Create Enterprise Account →</a>
+      <p style="text-align:center;margin-top:12px;"><a href="/plans/#enterprise" style="font-size:13px;color:var(--blue);text-decoration:underline;text-underline-offset:2px;">Learn more about Enterprise →</a></p>
+    </div>
+
+  </div>
+
+  <p class="pricing-secondary">
+    Not ready to commit? <a href="https://app.trueloadapp.com?plan=trial">Start with a free trial</a> — no credit card required. Want the full breakdown? <a href="/plans/">Compare all plans</a>. Questions? Email <a href="mailto:info@ethermsolutions.com">info@ethermsolutions.com</a>
+  </p>
+</div>
+
+<div class="divider"></div>
+
+<!-- HOMEOWNERS -->
+<div class="homeowner-section fade-up" id="homeowners">
+  <div class="homeowner-card">
+    <div>
+      <div class="section-label">For Homeowners</div>
+      <h2>Told you need a panel upgrade?</h2>
+      <p>You may not. Most homes use far less of their electrical service than a worst-case calculation assumes, and the code lets your contractor prove it with your own smart-meter data. TruePeak is the tool they use to do that. Read the guide, then send it to your electrician or heat pump installer.</p>
+    </div>
+    <div class="homeowner-actions">
+      <a href="/resources/guides/do-i-need-a-panel-upgrade/" class="btn-primary">Read the homeowner guide →</a>
+      <a href="/resources/calculator/" class="btn-secondary">Try the panel capacity calculator</a>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- FAQ -->
+<div class="faq-section fade-up" id="faq">
+  <div class="pricing-header">
+    <div class="section-label">FAQ</div>
+    <h2>Load calculation questions, answered</h2>
+  </div>
+  <div class="faq-list">
+    <details class="faq-item">
+      <summary>What is a measured-demand (NEC 220.87) load calculation?</summary>
+      <p>It is the code's way of sizing the load on an existing service from what the utility meter actually recorded, instead of from nameplate ratings and demand factors. The highest measured peak over the past year is taken at 125 percent, the new load is added, and the total has to fit within the rating of the service.</p>
+    </details>
+    <details class="faq-item">
+      <summary>How is that different from a traditional electrical load calculation?</summary>
+      <p>A traditional calculation models the home from square footage, appliance nameplates and demand factors. It is a worst-case estimate. Measured demand uses the home's own record. In LBNL research covering 11,940 homes, the measured approach came out roughly 40 percent lower on average.</p>
+    </details>
+    <details class="faq-item">
+      <summary>What if the utility doesn't have interval data for the home?</summary>
+      <p>Run the traditional calculation instead. The same TruePeak project runs either method, so a home with no smart-meter history still gets a load calculation and a report, in minutes, with no data request.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Can a 100-amp panel handle a heat pump or an EV charger?</summary>
+      <p>Often, yes. The average U.S. home peaks at about 40 amps on a 100-amp service. Whether a specific home has room depends on its own measured peak and the equipment being added, which is exactly what a measured-demand calculation documents.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Will my inspector accept a measured-demand calculation?</summary>
+      <p>It is part of the code, not a workaround, and TruePeak's report shows the data source, the peak, the 125 percent factor and the new load so the math can be checked. The Authority Having Jurisdiction always has the final say, so it is worth a conversation with your AHJ before the first submission.</p>
+    </details>
+    <details class="faq-item">
+      <summary>I'm a homeowner. Can I use TruePeak?</summary>
+      <p>TruePeak is built for the licensed electrician or installer who prepares and signs the calculation. If you have been told you need a panel upgrade, send your contractor <a href="/resources/guides/do-i-need-a-panel-upgrade/">our homeowner guide</a> and ask them to check your measured demand first.</p>
+    </details>
+  </div>
+  <p class="pricing-secondary" style="text-align:center;margin-top:32px;">More in the <a href="/resources/">Resource Library</a>, including <a href="/resources/guides/nec-220-83-vs-220-87/">measured demand vs. the traditional calculation</a> and <a href="/resources/guides/how-to-get-interval-data-from-your-utility/">how to get interval data from a utility</a>.</p>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <img src="truepeak_logo.svg" alt="TruePeak">
+  </div>
+  <p class="footer-disclaimer">
+    TruePeak is a service adequacy evaluation aid. This tool does not constitute engineering services, guarantee code compliance, or imply AHJ approval. Final responsibility for code compliance remains with the licensed preparer and the Authority Having Jurisdiction.
+  </p>
+  <p class="footer-disclaimer" style="color:var(--slate-800);font-weight:500;">TruePeak is built by eTherm Solutions LLC.</p>
+  <div class="footer-links" style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;">
+    <a href="/resources/" class="footer-link">Resources</a>
+    <a href="/terms/" class="footer-link">Terms of Service</a>
+    <a href="/privacy/" class="footer-link">Privacy Policy</a>
+    <a href="mailto:info@ethermsolutions.com" class="footer-link">info@ethermsolutions.com</a>
+  </div>
+</footer>
+
+<script>
+// Scroll fade-in + bar chart animation
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(el => {
+    if (el.isIntersecting) {
+      el.target.classList.add('visible');
+      observer.unobserve(el.target);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// Animate capacity bars when chart enters view
+const chartObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.querySelectorAll('.chart-bar-fill').forEach(bar => {
+        const target = bar.dataset.width + '%';
+        setTimeout(() => { bar.style.width = target; }, 200);
+      });
+      chartObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+const chart = document.getElementById('capacity-chart');
+if (chart) chartObserver.observe(chart);
+
+// Podcast: click-to-load YouTube embed. Nothing from YouTube loads until the
+// visitor asks for the video; "Watch the episode" falls back to youtube.com
+// in a new tab if scripts are off.
+(function () {
+  const box = document.getElementById('podcast-video');
+  const play = document.getElementById('podcast-play');
+  const watch = document.getElementById('podcast-watch');
+  if (!box || !play) return;
+  function loadVideo() {
+    if (box.querySelector('iframe')) return;
+    const iframe = document.createElement('iframe');
+    iframe.src = 'https://www.youtube-nocookie.com/embed/OVZiqvVBo88?autoplay=1';
+    iframe.title = 'The Heat Pump Podcast, Ep. 71: Stop Losing Heat Pump Jobs to Panel Upgrades, with Jake Marin of TrueLoad';
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    iframe.allowFullscreen = true;
+    iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+    box.replaceChildren(iframe);
+    iframe.focus();
+  }
+  play.addEventListener('click', loadVideo);
+  if (watch) watch.addEventListener('click', function (e) {
+    e.preventDefault();
+    loadVideo();
+    box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+})();
+
+</script>
+
+</body>
+</html>
